@@ -16,7 +16,6 @@ In this step, we will install, configure and test your vagrant web development e
 - [Step 6: Test](#step-6-test)
 - [Step 7: Stop your rails server](#step-7-stop-your-rails-server)
 - [Step 8: Learn about your vagrant coding environment](#step-8-learn-about-your-vagrant-coding-environment)
-- [Step 9: Enable Virtualization (if necessary)](#step-9-enable-virtualization-(optional))
 
 > **Note:** Make sure to close any other virtualization environments you have running.  If you happen to be running Parallels, VirtualBox or VMWare for other reasons, you will need to close them.
 
@@ -34,7 +33,15 @@ To find out if virtualization is enabled on your machine, please follow the step
 
 ![Screenshot](images/virtualization-enabled.png)
 
-If virtualization is not *Enabled*, skip to [Step 9](#step-9-enable-virtualization-(optional)).
+**If virtualization is not *Enabled*, you will not be able to use Vagrant on your machine and it's recommended that you use [Cloud9](windows.md#step-two-set-up-a-cloud-ide-alternative) as your development environment instead.**
+
+It may be possible to enable virtualization from your machine's BIOS settings, though we're unable to provide specific instructions to accomplish this as every motherboard comes with a different BIOS interface. Additionally there's a high potential for causing damage to your computer from changing settings in the BIOS -- even if you do everything correctly.
+
+Due to this, if virtualization is not enabled on your machine by default, we highly recommend that you use [Cloud9 IDE](windows.md#step-two-set-up-a-cloud-ide-alternative) instead. It's a great fully featured option that will allow you to access your development environment from any computer in the world with an internet connection.
+
+If you feel confident updating your BIOS settings to enable virtualization, do so at your own risk, or discuss the option with your mentor. It's still recommended to get setup with [Cloud9](windows.md#step-two-set-up-a-cloud-ide-alternative) in the meantime so that you can begin working through the material.
+
+**Do not proceed if virtualization is not enabled on your machine, use [Cloud9](windows.md#step-two-set-up-a-cloud-ide-alternative) instead.**
 
 ## Step 1: Get the files
 
@@ -246,41 +253,3 @@ By following these instructions in this guide you've setup a virtual machine wit
 Since you will be using this coding environment extensively in the future, understanding it will be important.
 
 **_[Visit the the Introduction to Vagrant](cheat-sheets/vagrant-intro-windows.md)_** to learn more about how to use this development environment that you just setup.
-
-## Step 9: Enable virtualization (if necessary)
-
-***Only complete this step if you have determined that virtualization is not enabled***.
-
-Virtualization settings are handled by your motherboards System BIOS. To enable virtualization you will need to enter your computers BIOS and manually enable the setting. Each motherboard can have a different way of entering its BIOS utility, so you'll need to look up instructions for your particular motherboard.
-
-If you don't know what kind of motherboard you have you can find out by following the steps below:
-
-If you're running Windows 8 or 10:
-
-* First go to the Desktop and press **Windows key** + **X**, which will open up the Power User Task Menu.
-
-* Next, click on **Run**.
-
-* In the text field, type **msinfo32** and hit enter.
-
-If you're running Windows 7 or earlier:
-
-* Open the Start menu.
- 
-* Navigate to All Programs > Accessories > System Tools and select the System Information utility.
-
-> *Note that motherboards may also be referred to as BaseBoard. If the model number shown is **unavailable**, don't worry, you will most likely only need the manufacturer name.*
-
-* Now that we have your motherboard manufacturer, do a google search for "YOUR_MOTHERBOARD_MANUFACTURER bios key"
-
-    * Your results will most likely point to the **DELETE** key or **F2**.
-
-    * If the BIOS key still isn't clear, you can try rebooting your computer and checking the message at the top within the first few seconds of startup.
-
-* Make note of which key you'll need to press, then google "YOUR_MOTHERBOARD_MANUFACTURER enable virtualization"
-
-> *It is recommended that you either perform the search on your phone or take brief notes of the necessary steps, since you will have to reboot your computer in order to enter the BIOS.*
-
-* Next, walk through the steps yielded in your Google search to enable VT-x or AMD SVM. Remember that you won't be able to check Google on your machine while in the BIOS, so make sure to have the instructions pulled up on another screen or written down.
-
-* If everything is successful, continue with [Step 1](#step-1-get-the-files).
